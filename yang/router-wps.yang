@@ -1,0 +1,52 @@
+module router-wps {
+    yang-version 1.1;
+    namespace "https://terasteram/ns/yang/router-wps";
+    prefix "rw";
+
+    revision 2019-06-18 {
+        description "Initial revision.";
+    }
+
+    container status {
+        config false;
+        leaf code {
+            type int64;
+        }
+        leaf status {
+            type string;
+        }
+    }
+    container pbc {
+        config false;
+    }
+    container pbc_client {
+        config false;
+    }
+    container genpin {
+        config false;
+        leaf pin {
+            type string;
+        }
+    }
+    container checkpin {
+        config false;
+        leaf valid {
+            type boolean;
+        }
+    }
+    container stapin {
+        config false;
+    }
+    container setpin {
+        config false;
+    }
+    container showpin {
+        config false;
+        leaf pin {
+            type string;
+        }
+    }
+    container stop {
+        config false;
+    }
+}
