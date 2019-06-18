@@ -1,0 +1,48 @@
+module router-wireless {
+	yang-version 1.1;
+	namespace "https://generic-ubus/router-wireless";
+	prefix "rw";
+
+
+	revision "2019-06-04" {
+		description "Initial revision.";
+	}
+
+	container router-wireless {
+		config false;
+
+		container status {
+			leaf wldev {
+				type string;
+			}
+			leaf radio {
+				type int32;
+			}
+			leaf ssid {
+				type string;
+			}
+			leaf bssid {
+				type string;
+			}
+			leaf encryption {
+				type string;
+			}
+			leaf frequency {
+				type int32;
+			}
+			leaf channel {
+				type int32;
+			}
+			leaf bandwidth {
+				type int32;
+			}
+			leaf noise {
+				type int32;
+			}
+			leaf rate {
+				type int32;
+			}
+
+		}
+	}
+}
