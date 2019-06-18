@@ -1,0 +1,49 @@
+module system {
+    yang-version 1.1;
+    namespace "https://terastream/ns/yang/system";
+    prefix "sys";
+
+    revision 2019-06-18 {
+        description "Initial revision.";
+    }
+
+    container board {
+        config false;
+        leaf kernel {
+            type string;
+        }
+        leaf hostname {
+            type string;
+        }
+        leaf system {
+            type string;
+        }
+        leaf model {
+            type string;
+        }
+        leaf board_name {
+            type string;
+        }
+        container release {
+            leaf distribution {
+                type string;
+            }
+            leaf version {
+                type string;
+            }
+            leaf revision {
+                type string;
+            }
+            leaf codename {
+                type string;
+            }
+            leaf target {
+                type string;
+            }
+            leaf description {
+                type string;
+            }
+        }
+    }
+
+}
