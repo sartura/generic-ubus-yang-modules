@@ -1,10 +1,10 @@
 module router-wireless {
 	yang-version 1.1;
-	namespace "https://generic-ubus/router-wireless";
+	namespace "https://terastream/ns/yang/router-wireless";
 	prefix "rw";
 
 
-	revision "2019-06-04" {
+	revision 2019-06-04 {
 		description "Initial revision.";
 	}
 

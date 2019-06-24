@@ -3,7 +3,7 @@ module sfp-ddm {
     namespace "https://terastream/ns/yang/sfp-ddm";
     prefix "sd";
 
-    revision 2019-08-18 {
+    revision 2019-06-18 {
         description "Initial revision.";
     }
 

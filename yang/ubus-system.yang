@@ -1,14 +1,16 @@
-module system {
+module ubus-system {
     yang-version 1.1;
-    namespace "https://terastream/ns/yang/system";
+    namespace "https://terastream/ns/yang/ubus-system";
     prefix "sys";
 
     revision 2019-06-18 {
         description "Initial revision.";
     }
 
-    container board {
-        config false;
+
+   container ubus-system {
+       config false;
+       container board {
         leaf kernel {
             type string;
         }
@@ -45,5 +47,5 @@ module system {
             }
         }
     }
-
+   }
 }
