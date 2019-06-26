@@ -1,14 +1,14 @@
-module ubus-system {
+module generic-ubus-system {
     yang-version 1.1;
-    namespace "https://terastream/ns/yang/ubus-system";
+    namespace "https://terastream/ns/yang/generic-ubus-system";
     prefix "sys";
 
-    revision 2019-06-18 {
+    revision 2019-06-24 {
         description "Initial revision.";
     }
 
 
-   container ubus-system {
+   container generic-ubus-system {
        config false;
        container board {
         leaf kernel {

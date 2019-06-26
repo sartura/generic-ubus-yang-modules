@@ -1,0 +1,117 @@
+module generic-ubus-router-system {
+  yang-version 1.1;
+  namespace "https://terastream/ns/yang/generic-ubus-router-system";
+  prefix "gurs";
+
+  import ietf-yang-types {
+    prefix iyt;
+  }
+
+  revision 2019-06-24 {
+		description "Initial revision.";
+	}
+
+  container generic-ubus-router-system {
+    config false;
+    container memory_bank {
+      leaf code {
+        type string;
+      }
+      leaf memory_bank {
+        type string;
+      }
+      leaf current_bank_firmware {
+        type string;
+      }
+      leaf previous_bank_firmware {
+        type string;
+      }
+    }
+
+    container info {
+      container "system" {
+        leaf name{ type string; }
+        leaf hardware { type string; }
+        leaf model { type string; }
+        leaf boardid {type string; }
+        leaf firmware{ type string; }
+        leaf brcmver {type string; }
+        leaf bspver { type string; }
+        leaf filesystem { type string; }
+        leaf socmod { type string; }
+        leaf socrev { type string; }
+        leaf cfever { type string; }
+        leaf kernel { type string; }
+        leaf basemac { type iyt:mac-address; }
+        leaf serialno { type string; }
+        leaf localtime { type iyt:timestamp; }
+        leaf date { type string; }
+        leaf uptime { type string; }
+        leaf procs {
+          type uint32;
+        }
+        leaf cpu_per {
+          type uint32;
+        }
+      }
+
+      container memoryKB {
+        leaf total {
+          type uint64;
+        }
+        leaf used {
+          type uint64;
+        }
+        leaf free {
+          type uint64;
+        }
+        leaf shared {
+          type uint64;
+        }
+        leaf buffers {
+          type uint64;
+        }
+      }
+
+      container keys {
+        leaf auth {
+          type string;
+        }
+        leaf des {
+          type string;
+        }
+        leaf wpa {
+          type string;
+        }
+      }
+
+      container specs {
+        leaf wifi {
+          type boolean;
+        }
+        leaf adsl {
+          type boolean;
+        }
+        leaf vdsl {
+          type boolean;
+        }
+        leaf voice {
+          type boolean;
+        }
+        leaf dect {
+          type boolean;
+        }
+        leaf usb {
+          type boolean;
+        }
+        leaf voice_ports {
+          type uint64;
+        }
+        leaf eth_ports {
+          type uint64;
+        }
+      }
+    }
+  }
+
+}
