@@ -1,6 +1,6 @@
 # Content
 * List of YANG modules
-* How to write an ubus specific YANG module
+* How to write a ubus-specific YANG module
 
 # List of YANG modules
 The supplied YANG modules are as follows:
@@ -9,13 +9,13 @@ The supplied YANG modules are as follows:
 * generic-ubus-sip.yang
 * generic-ubus-system.yang
 
-# How to write an ubus specific YANG module
-This section is related to how to write an ubus specific YANG module that
-is able to be read with the [generic ubus plugin](). <!-- TODO add link -->
+# How to write a ubus-specific YANG module
+This section is related to writing a ubus-specific YANG module that can be read
+with the [generic ubus plugin](). <!-- TODO add link -->
 
-There are a set of rules that need to be met when writing an ubus specific
-YANG module for state data representation. The rules are as follows:
-* root container needs to be the same name as the module; but module name is
+A set of rules needs to be met when writing a ubus-specific YANG module for
+state data representation. The rules are as follows:
+* root container needs to be the same name as the module; but the module name
   has no predefined naming conventions,
 * sibling child container of the root container represent the ubus object
   methods and need to have the same name as the ubus object methods,
@@ -34,12 +34,12 @@ The way that the generic ubus plugin converts the JSON keys and values to the ap
 | array of {array, object}            |   list            |
 | object                              |   container       |
 
-## Example: ubus specific YANG module
+## Example: ubus-specific YANG module
 
-To demonstrate how to use the above provided rules a simple example is
-provided below. The example contains a simp JSON object simbolizing a
-ubus object method response and the YANG module that is created for the ubus
-object following the rules.
+To demonstrate how to use the above-provided rules, a simple example is
+given below. The example contains a simple JSON object symbolizing a ubus object
+method response and the YANG module that is created for the ubus object
+following the rules.
 
 ### Ubus object information
 
