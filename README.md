@@ -45,7 +45,7 @@ object following the rules.
 
 | ubus object | ubus method | ubus method          |
 |-------------|:------------|:---------------------|
-|   weather   |   report    | { "citiy" : string } |
+|   weather   |   report    | { "city" : string } |
 
 ### Ubus object method response JSON format
 
