@@ -11,7 +11,7 @@ The supplied YANG modules are as follows:
 
 # How to write a ubus-specific YANG module
 This section is related to writing a ubus-specific YANG module that can be read
-with the [generic ubus plugin](). <!-- TODO add link -->
+with the [generic ubus plugin](https://github.com/sartura/generic-ubus-plugin).
 
 A set of rules needs to be met when writing a ubus-specific YANG module for
 state data representation. The rules are as follows:
